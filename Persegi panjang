@@ -1,0 +1,27 @@
+class PersegiPanjang {
+    double p, l;
+
+    PersegiPanjang(double p, double l) {
+        this.p = p;
+        this.l = l;
+    }
+
+    double luas() {
+        return p * l;
+    }
+}
+
+class HitungL {
+
+    double luasHitam(PersegiPanjang luar, PersegiPanjang dalam) {
+        return luar.luas() - dalam.luas();
+    }
+
+    public static void main(String[] args) {
+        PersegiPanjang luar = new PersegiPanjang(10, 8);
+        PersegiPanjang dalam = new PersegiPanjang(8, 4);
+
+        HitungL h = new HitungL();
+        System.out.println("Luas bidang hitam = " + h.luasHitam(luar, dalam));
+    }
+}
