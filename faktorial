@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+class Faktorial {
+    int n;
+
+    Faktorial(int n) {
+        this.n = n;
+    }
+
+    int hitungFaktorial() {
+        int hasil = 1;
+        for (int i = 1; i <= n; i++) {
+            hasil *= i;
+        }
+        return hasil;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan angka: ");
+        int n = sc.nextInt();
+
+        Faktorial f = new Faktorial(n);
+        System.out.println("Faktorial = " + f.hitungFaktorial());
+    }
+}
