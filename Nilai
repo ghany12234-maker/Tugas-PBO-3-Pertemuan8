@@ -1,0 +1,20 @@
+class Nilai {
+    int[] data;
+
+    Nilai(int[] data) {
+        this.data = data;
+    }
+
+    double rataRata() {
+        int total = 0;
+        for (int d : data) total += d;
+        return (double) total / data.length;
+    }
+
+    public static void main(String[] args) {
+        int[] nilai = {70, 80, 90, 85};
+
+        Nilai n = new Nilai(nilai);
+        System.out.println("Rata-rata = " + n.rataRata());
+    }
+}
