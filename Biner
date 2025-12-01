@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Biner {
+    int n;
+
+    Biner(int n) {
+        this.n = n;
+    }
+
+    String toBinary() {
+        return Integer.toBinaryString(n);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan bilangan: ");
+        int n = sc.nextInt();
+
+        Biner b = new Biner(n);
+        System.out.println("Biner: " + b.toBinary());
+    }
+}
